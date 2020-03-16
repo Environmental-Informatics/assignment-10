@@ -1,14 +1,14 @@
 # Environmental Informatics
 
-## Assignment 09 - Automated Data Quality Checking with Python
+## Assignment 10 - Descriptive Statistics and Environmental Metrics
 
 ### Lab Objectives
 
 On completion of this lab, students will be able to:
 
-1. Check datasets for gross errors, check for inconsistencies in variables, and check for range problems;
-2. Encapsulate each check in a function, that also returns information on how many data points failed checks; and
-3. Summarize the results of the data quality check.
+1. Calculate descriptive statistics for a dataset;
+3. Calculate metrics describing ecosystem health; and
+3. Generate summary graphs putting statistics and metrics in contect.
 
 ### Reading Assignment
 
