@@ -8,30 +8,29 @@ On completion of this lab, students will be able to:
 
 1. Calculate descriptive statistics for a dataset;
 3. Calculate metrics describing ecosystem health; and
-3. Generate summary graphs putting statistics and metrics in contect.
+3. Generate summary figures that put data into context using statistics and metrics.
 
 ### Reading Assignment
 
-Two journal articles related to data quality checking:
+For descriptive statistics, you can start with any basic statistics textbook, as they will all discuss the concepts of measuring the central tendency and variability of a dataset.  For a brief review of the concepts in the context of data science (or informatics), check out:
 
-- Reek, T., S.R. Doty, and T.W. Owen, 1992: A Deterministic Approach to the Validation of Historical Daily Temperature and Precipitation Data from the Cooperative Network. Bull. Amer. Meteor. Soc., 73, 753–765, [https://doi.org/10.1175/1520-0477(1992)073<0753:ADATTV>2.0.CO;2](https://doi.org/10.1175/1520-0477(1992)073<0753:ADATTV>2.0.CO;2)
+- [Introduction to descriptive statistics](https://towardsdatascience.com/intro-to-descriptive-statistics-252e9c464ac9)
 
-- Hu, Q. and S. Feng, 2003: A Daily Soil Temperature Dataset and Soil Temperature Climatology of the Contiguous United States. J. Appl. Meteor., 42, 1139–1156, [https://doi.org/10.1175/1520-0450(2003)042<1139:ADSTDA>2.0.CO;2](https://doi.org/10.1175/1520-0450(2003)042<1139:ADSTDA>2.0.CO;2)
+For environmental metrics, please read these two papers by Derek Booth and two of his students.  Both seek to identify environmental metrics with predictive ability for water quality.  The first uses metrics to quantify the most ecologically significant changes in daily streamflow characteristics, while the second quantifies observed differences in land use in the upstream area near sampling sites.
+
+- Konrad, C.P. and Booth, D.B. (2005) Hydrologic Changes in Urban Streams and Their Ecological Significance. American Fisheries Society Symposium, 47, 157-177.
+
+- McBride, M. and Booth, D.B. (2005), URBAN IMPACTS ON PHYSICAL STREAM CONDITION: EFFECTS OF SPATIAL SCALE, CONNECTIVITY, AND LONGITUDINAL TRENDS1. JAWRA Journal of the American Water Resources Association, 41: 565-580. [doi:10.1111/j.1752-1688.2005.tb03755.x](doi:10.1111/j.1752-1688.2005.tb03755.x)
 
 ### The Lab Assignment
 
-This week’s assignment is to conduct basic data quality checking on a meteorological data with some known problems.
+This week’s assignment is to calculate basic descriptive statistics and environmental metrics for two rivers with similar climate and drainage areas.  Do this by reading the two files into you Python code, checking for gross errors, clipping the two datasets to a consistent time period, and calculating the prescribed statistics and metrics.  
 
-1. Use the file **DataQualityChecking.txt** provided with this repository.
+1. Use the files **TippecanoeRiver_Discharge_03331500_19431001-20200315.txt** and **WildcatCreek_Discharge_03335000_19540601-20200315.txt** provided with this repository.
 
-   - This file contains daily climate data for a single site.
+   - These files contain daily discharge in cubic feet per second (cfs) for a single USGS gaging station.
    - Data file is white space delimited.
-   - Columns are in order:
-     - date,
-     - precipitation (mm),
-     - maximum air temperature (°C)
-     - minimum air temperature (°C), and
-     - wind speed (m/s)
+   - Column order and units are provided in the file header.
      
 2. Modify the Python script template called program-09.py to complete this assignment.  The template contains code defining function names and input/output parameters, as well as comment text describing what each function should accept as parameters, return as variables, and functionally what each function should do.  **DO NOT** rename the python script, and **DO NOT** change the name or order of the parameters being sent to or from each function.  The template defines functions that the autograder program is going to import and evaluate.  Changing the program name or the function definitions, will cause the autograder to fail even if your code "works" for you.  
 
