@@ -32,14 +32,17 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
    - Data file is white space delimited.
    - Column order and units are provided in the file header.
      
-2. Modify the Python script template called program-09.py to complete this assignment.  The template contains code defining function names and input/output parameters, as well as comment text describing what each function should accept as parameters, return as variables, and functionally what each function should do.  **DO NOT** rename the python script, and **DO NOT** change the name or order of the parameters being sent to or from each function.  The template defines functions that the autograder program is going to import and evaluate.  Changing the program name or the function definitions, will cause the autograder to fail even if your code "works" for you.  
+2. Modify the Python script template called program-10_template.py to complete this assignment.  The template contains code defining function names and input/output parameters, as well as comment text describing what each function should accept as parameters, return as variables, and functionally what each function should do.  **DO NOT** rename the python script, and **DO NOT** change the name or order of the parameters being sent to or from each function.  The template defines functions that the autograder program is going to import and evaluate.  Changing the program name or the function definitions, will cause the autograder to fail even if your code "works" for you.  
 
-2. Modify the Python script template called program-09.py so that it does the following:
+2. Copy the Python script template to a new script called **program-10.py** and edit the script so that it does the following:
 
-   - Imports the entire file in as a DataFrame, using date as the index.
-   - Removes `No Data` values (defined as -999 in this file).
-   - Completes the following data quality checks:
-     - **Check 1:** Check for gross errors: 0 ≤ P ≤ 25; -25≤ T ≤ 35, 0 ≤ WS ≤ 10.
+   - Imports both streamflow file as DataFrames, using date as the index.  
+     - Use two datafames, or a list of dataframes so that the dataframe containing streamflow from each river can be processed by each of the following functions.
+     - Make sure that this function removes invalid streamflow data values.  The USGS file typically skips days with no measurement, but there are times when non-number values are used to fill for the discharge measurement when a final decision on its availability or quality has not been made.
+   - Process each discharge dataset through the following functions:
+     - Function 1: Compute the mean, coefficient of variation, and skew for a given set of values.
+     - Function 2: Compute the T-Q Mean of a given set of values
+     - Function 4: Compute the R-B Index of steeamflow by water year and by month
      - **Check 2:** Swap Tmax and Tmin when Tmax is less than Tmin.
      - **Check 3:** Check for temperature range greater than 25°C
    - Where a check is failed, replace the value with NaN.
