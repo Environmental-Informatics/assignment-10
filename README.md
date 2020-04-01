@@ -99,20 +99,20 @@ The following should be included in your GitHub repository:
 | Question | Description | Score |
 | -------- | ----------- | ----- |
 | 1. | Write a Python script to complete the following analysis | (35.0 pts) |
-| 1.1. | Import the entire file in as a DataFrame, using date as the index | 3.0 pts |
-| 1.2. | Clip data to correct analysis time period. | 3.0 pts |
-| 1.3. | Build Water Year metrics table | 4.0 pts |
-| 1.4. | Build Monthly metrics table | 4.0 pts |
-| 1.5. | Calculate annual metrics (1 pt per metric). | 9.0 pts |
-| 1.6. | Calculate monthly metrics (1 pt per metric). | 4.0 pts |
-| 1.7. | Calculate annual average metrics.  | 4.0 pts |
-| 1.8. | Calculate annual monthly average metrics. | 4.0 pts |
+| 1.1. | - Import the entire file in as a DataFrame, using date as the index | 3.0 pts |
+| 1.2. | - Clip data to correct analysis time period. | 3.0 pts |
+| 1.3. | - Build Water Year metrics table | 4.0 pts |
+| 1.4. | - Build Monthly metrics table | 4.0 pts |
+| 1.5. | - Calculate annual metrics (1 pt per metric). | 9.0 pts |
+| 1.6. | - Calculate monthly metrics (1 pt per metric). | 4.0 pts |
+| 1.7. | - Calculate annual average metrics.  | 4.0 pts |
+| 1.8. | - Calculate annual monthly average metrics. | 4.0 pts |
 | 2. | Program should have clear and concise header and in-line comments | 5 pts |
 | 3. | Output files: | (10 pts) |
-| 4.1. | **Annual_Metrics.csv** file contains all annual metrics and is CSV format. | 2.5 pts |
-| 4.2. | **Monthly_Metrics.csv** file contains all monthly metrics and is CSV format. | 2.5 pts |
-| 4.3. | **Average_Annual_Metrics.txt** file contains annual average values in a TAB deliminted format. | 2.5 pts |
-| 4.4. | **Average_Monthly_Metrics.txt** file contains annual monthly average values in a TAB deliminted format. | 2.5 pts |
+| 3.1. | - Annual_Metrics.csv file contains all annual metrics and is CSV format. | 2.5 pts |
+| 3.2. | - Monthly_Metrics.csv file contains all monthly metrics and is CSV format. | 2.5 pts |
+| 3.3. | - Average_Annual_Metrics.txt file contains annual average values in a TAB deliminted format. | 2.5 pts |
+| 3.4. | - Average_Monthly_Metrics.txt file contains annual monthly average values in a TAB deliminted format. | 2.5 pts |
 
 #### General output file the program
 
