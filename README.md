@@ -7,7 +7,7 @@
 On completion of this lab, students will be able to:
 
 1. Calculate descriptive statistics for a dataset;
-3. Calculate streamflow metrics further describing the distribution of daily streamflow and taht are correlated with aquatic ecosystem health; and
+3. Calculate streamflow metrics further describing the distribution of daily streamflow and that are correlated with aquatic ecosystem health; and
 3. Generate summary tables that put the streamflow data into context using statistics and metrics.
 
 ### Reading Assignment
@@ -16,7 +16,7 @@ For descriptive statistics, you can start with any basic statistics textbook, as
 
 - [Introduction to descriptive statistics](https://towardsdatascience.com/intro-to-descriptive-statistics-252e9c464ac9)
 
-For environmental metrics, please read these two papers by Derek Booth and two of his students (posted to Blackbaord under Reading Materials -> Analysis Metrics).  Both seek to identify environmental metrics with predictive ability for water quality.  The first uses metrics to quantify the most ecologically significant changes in daily streamflow characteristics, while the second quantifies observed differences in land use in the upstream area near sampling sites.
+For environmental metrics, please read these two papers by Derek Booth and two of his students (posted to Blackboard under Reading Materials -> Analysis Metrics).  Both seek to identify environmental metrics with predictive ability for water quality.  The first uses metrics to quantify the most ecologically significant changes in daily streamflow characteristics, while the second quantifies observed differences in land use in the upstream area near sampling sites.
 
 - Konrad, C.P. and Booth, D.B. (2005) Hydrologic Changes in Urban Streams and Their Ecological Significance. American Fisheries Society Symposium, 47, 157-177.
 
@@ -37,11 +37,11 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
 2. Copy the Python script template to a new script called **program-10.py** in the same folder, and edit this script so that it does the following:
 
    - Imports both streamflow file as DataFrames, using date as the index.  
-     - Use two datafames, or a list of dataframes so that the dataframe containing streamflow from each river can be processed by each of the following functions.
+     - Use two dataframes, or a list of dataframes so that the dataframe containing streamflow from each river can be processed by each of the following functions.
      - Make sure that this function removes invalid streamflow data values.  The USGS file typically skips days with no measurement, but there are times when non-number values are used to fill for the discharge measurement when a final decision on its availability or quality has not been made.
      - Modify the provided function `ReadData()` to remove negative streamflow values as a gross error check.
      - Report only the total number of days missing observations at the end of the function, you do not need to count those failing the gross error check separately.
-   - Complete the function `ClipData` to clip the data to the date range: October 1, 1969 through September 30, 2019.  This will provide you with 50 water years of streamflow data for your analysis.  The USGS defines a waer yaer as starting on October 1 of any year, for example the water year 2010 started on October 1, 2010 and ran throgh September 30, 2011.
+   - Complete the function `ClipData` to clip the data to the date range: October 1, 1969 through September 30, 2019.  This will provide you with 50 water years of streamflow data for your analysis.  The USGS defines a water year as starting on October 1 of any year, for example the water year 2010 started on October 1, 2010 and ran through September 30, 2011.
    - Complete the function `GetAnnualStatistics` to build a new dataframe to contain annual (water year) values for the following metrics:
      
      | Full Name | DF Name | Description |
@@ -51,10 +51,10 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
      | Annual Median Flow | `Median Flow` |  Median streamflow value in a given year. Can apply standard Pandas function. |
      | Coefficient of Variation | `Coeff Var` | Coefficient of variation of streamflow in a given year. Calculated as the standard deviation divided by the mean annual streamflow multiplied by 100. |
      | Skewness | `Skew` | The skewness of the dataset.  Can make use of the SciPy Stats skew function. |
-     | T-Qmean | `Tqmean` | The fraction of time (days) that streamflow exceeds mean annual streamflow (Qmean).  Complete the function `CalcTqmean` to accept a Series of daily streamflow values, calcualte the mean flow, and return the number of days on which daily streamflow is greater than the mean flow. |
+     | T-Qmean | `Tqmean` | The fraction of time (days) that streamflow exceeds mean annual streamflow (Qmean).  Complete the function `CalcTqmean` to accept a Series of daily streamflow values, calculate the mean flow, and return the number of days on which daily streamflow is greater than the mean flow. |
      | Richards-Baker Flashiness Index | `R-B Index` | This is a measure of how much streamflow can change in a day ('flashiness').  Complete the function `CalcRBindex` to accept a Series of daily streamflow values, and return the R-B Index value.  The R-B Index is calculated by dividing the sum of the absolute values of day-to-day streamflow change by total discharge volumes for each year. |
-     | 7-day Low Flow | `7Q` | The 7-day low flow is a common measurement of low flow in stream dsicharge, as metircs like minimum daily flow can fail as no flow or flow taht is too low to measure is not unexpected in some cases.  Complete the function `Calc7Q` to accecpt a Series of Daily streamflow values, and return the 7-day low flow value. The index is calculated by computing a 7-day moving average for the annual dataset, and picking the lowest average flow in any 7-day period. |
-     | Flow Exceeding 3 Times Median Flow | `3xMedian` | This is a measure of the frequency of high flow (but not necessarily the highest flow) events.  Compelte the function `CalcExceed3TimesMedian` to accept a Series of daily streamflow values, and return the number of days that streamflow exceeds 3 times the median flow of the same period. |
+     | 7-day Low Flow | `7Q` | The 7-day low flow is a common measurement of low flow in stream discharge, as metrics like minimum daily flow can fail as no flow or flow that is too low to measure is not unexpected in some cases.  Complete the function `Calc7Q` to accept a Series of Daily streamflow values, and return the 7-day low flow value. The index is calculated by computing a 7-day moving average for the annual dataset, and picking the lowest average flow in any 7-day period. |
+     | Flow Exceeding 3 Times Median Flow | `3xMedian` | This is a measure of the frequency of high flow (but not necessarily the highest flow) events.  Complete the function `CalcExceed3TimesMedian` to accept a Series of daily streamflow values, and return the number of days that streamflow exceeds 3 times the median flow of the same period. |
      
      - Use the `Table Name` as the column header in your Pandas DataFrame.
      - Look into using the Pandas [`resample` method](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#resampling) to aggregate your daily time series into annual values.  You will want to review *Anchored Offsets* for appropriate ways to sample data and maintain the Water Year using October 1 as the anchor for resultant dates. Pandas functions such as `mean` can be applied directly during the resample process, but to apply your custom built functions look into the Pandas `apply` method. 
@@ -65,12 +65,12 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
      |-----|-----|-----|
      | Annual Mean Flow | `Mean Flow` | Average annual streamflow for a given year. Can apply standard Pandas function. |
      | Coefficient of Variation | `Coeff Var` | Coefficient of variation of streamflow in a given year. Calculated as the standard deviation divided by the mean annual streamflow multiplied by 100. |
-     | T-Qmean | `Tqmean` | The fraction of time (days) that streamflow exceeds mean annual streamflow (Qmean).  Complete the function `CalcTqmean` to accept a Series of daily streamflow values, calcualte the mean flow, and return the number of days on which daily streamflow is greater than the mean flow. |
+     | T-Qmean | `Tqmean` | The fraction of time (days) that streamflow exceeds mean annual streamflow (Qmean).  Complete the function `CalcTqmean` to accept a Series of daily streamflow values, calculate the mean flow, and return the number of days on which daily streamflow is greater than the mean flow. |
      | Richards-Baker Flashiness Index | `R-B Index` | This is a measure of how much streamflow can change in a day ('flashiness').  Complete the function `CalcRBindex` to accept a Series of daily streamflow values, and return the R-B Index value.  The R-B Index is calculated by dividing the sum of the absolute values of day-to-day streamflow change by total discharge volumes for each year. |
     
-     -  This function should be very similar to the annual version, but reporting for months.  Theere should be no reason to rewrite any of the metric calulation functions, if you wrote them to work with *any* length data series provided.
+     -  This function should be very similar to the annual version, but reporting for months.  There should be no reason to rewrite any of the metric calculation functions, if you wrote them to work with *any* length data series provided.
      
-   - Complete the fucntion `GetAnnualAverages` and `GetMonthlyAverages` to compute annual average values for all metrics.  
+   - Complete the function `GetAnnualAverages` and `GetMonthlyAverages` to compute annual average values for all metrics.  
      - Annual average function should return a Series with a single average value for each statistic of metric.
      - Monthly average function should return a DataFrame with 12 monthly values for each metric.
      
@@ -111,12 +111,12 @@ The following should be included in your GitHub repository:
 | 3. | Output files: | (10 pts) |
 | 3.1. | - Annual_Metrics.csv file contains all annual metrics and is CSV format. | 2.5 pts |
 | 3.2. | - Monthly_Metrics.csv file contains all monthly metrics and is CSV format. | 2.5 pts |
-| 3.3. | - Average_Annual_Metrics.txt file contains annual average values in a TAB deliminted format. | 2.5 pts |
-| 3.4. | - Average_Monthly_Metrics.txt file contains annual monthly average values in a TAB deliminted format. | 2.5 pts |
+| 3.3. | - Average_Annual_Metrics.txt file contains annual average values in a TAB delimited format. | 2.5 pts |
+| 3.4. | - Average_Monthly_Metrics.txt file contains annual monthly average values in a TAB delimited format. | 2.5 pts |
 
 #### General output file the program
 
-The following is example output from the instructors version of the code, which uses the print statements embedded in the template.  Use it as a guide for evalauting you program's performance.
+The following is example output from the instructors version of the code, which uses the print statements embedded in the template.  Use it as a guide for evaluating you program's performance.
 
 ```
  ================================================== 
