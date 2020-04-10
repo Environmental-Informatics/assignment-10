@@ -76,7 +76,7 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
      
 3. Output the annual and monthly metrics tables to CSV files in the current directory called **Annual_Metrics.csv** and **Monthly_Metrics.csv**, respectively.  Each file should contain data for both rivers, with the first column being the short river name "Tippe" or "Wildcat".
 
-4. Output the annual and monthly averages to TAB delimited files in the current directory called **Average_Annual_Metrics.txt** and **Average_Monthly_Metrics.txt**, respectively.  Each file should contain data for both rivers, with the first column being the short river name "Tippe" or "Wildcat".
+4. Output the annual and monthly averages to TAB delimited files in the current directory called **Average_Annual_Metrics.txt** and **Average_Monthly_Metrics.txt**, respectively.  Each file should contain data for both rivers, with one column being the short river name "Tippe" or "Wildcat", with the column name "Station".
 
 5. Be sure that the script has a complete header comment block, appropriate in-line comments, and runs without intervention relative to where the datafile is stored in the repository.
 
