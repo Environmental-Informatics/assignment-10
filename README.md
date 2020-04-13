@@ -32,9 +32,9 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
    - Data file is white space delimited.
    - Column order and units are provided in the file header.
      
-2. Modify the Python script template called program-10_template.py to complete this assignment.  The template contains code defining function names and input/output parameters, as well as comment text describing what each function should accept as parameters, return as variables, and functionally what each function should do.  **DO NOT** change the name or order of the parameters being sent to or from each function.  The template defines functions that the autograder program is going to import and evaluate.  Changing the program name or the function definitions, will cause the autograder to fail even if your code "works" for you.  
+2. Modify the Python script template called program_10_template.py to complete this assignment.  The template contains code defining function names and input/output parameters, as well as comment text describing what each function should accept as parameters, return as variables, and functionally what each function should do.  **DO NOT** change the name or order of the parameters being sent to or from each function.  The template defines functions that the autograder program is going to import and evaluate.  Changing the program name or the function definitions, will cause the autograder to fail even if your code "works" for you.  
 
-2. Copy the Python script template to a new script called **program-10.py** in the same folder, and edit this script so that it does the following:
+2. Copy the Python script template to a new script called **program_10.py** in the same folder, and edit this script so that it does the following:
 
    - Imports both streamflow file as DataFrames, using date as the index.  
      - Use two dataframes, or a list of dataframes so that the dataframe containing streamflow from each river can be processed by each of the following functions.
@@ -84,7 +84,7 @@ This week’s assignment is to calculate basic descriptive statistics and enviro
 
 The following should be included in your GitHub repository:
 
-1. A working program called **program-10.py**, which conforms to the template provided with the original repository.
+1. A working program called **program_10.py**, which conforms to the template provided with the original repository.
 
 2. The original data files, **TippecanoeRiver_Discharge_03331500_19431001-20200315.txt** and **WildcatCreek_Discharge_03335000_19540601-20200315.txt**, provided with the repository.
 
